@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="page">
+
+    <div class="container">
+
+        <h1>Login</h1>
+
+        <div class="input-box">
+            <input type="email" required>
+            <label>Email</label>
+        </div>
+
+        <div class="input-box">
+            <input type="tel" required>
+            <label>Phone Number</label>
+        </div>
+
+        <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+
+        <a href="dashboard.html"><button>Log In</button></a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Focus Zone | All Rights Reserved</p>
+        <p>Email: focuszone@gmail.com | Phone: +961 70 123 456</p>
+    </footer>
+
+</div>
+
+<div class="top-bar">
+    <div id="user">Not logged in</div>
+</div>
+<script>
+function login() {
+    let nameInput = document.querySelector("input[type='email']").value;
+
+    // إذا بدك الاسم الحقيقي خلي input name أفضل (بس رح نستخدم هذا للتبسيط)
+    let name = prompt("Enter your name:");
+
+    if (name === "" || name === null) {
+        alert("Please enter your name");
+        return;
+    }
+
+    // نحط الاسم فوق مكان Login
+    document.getElementById("user").innerHTML = "👤 Welcome " + name;
+}
+</script>
+</body>
+</html>
